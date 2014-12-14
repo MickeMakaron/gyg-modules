@@ -22,7 +22,6 @@
  ****************************************************************/
 
 
-// Enclose functions in modules namespace.
 Class ModuleLoader
 {
 	private $modulesPath;
@@ -35,13 +34,11 @@ Class ModuleLoader
 
 	
 	/**
-	 * Load module, if whitelisted, by including its main file.
+	 * \brief Load module, if whitelisted, by including its main file.
 	 *
-	 * PARAMS:
-	 * moduleId, string - ID of module to load.
+	 * \param moduleId string ID of module to load.
 	 *
-	 * RETURNS:
-	 * bool - True if module was successfully loaded, else false.
+	 * \return bool True if module was successfully loaded, else false.
 	 */
 	public function loadModule($moduleId)
 	{
