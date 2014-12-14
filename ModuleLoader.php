@@ -52,44 +52,4 @@ Class ModuleLoader
 		
 		require_once($modulePath);
 	}
-
-	/**
-	 * Load several modules.
-	 *
-	 * PARAMS:
-	 * moduleIds, string array - Array containing IDs
-	 * of modules to load.
-	 * 
-	 * THROWS:
-	 * Parameter is not array.
-	 */
-	 /*
-	function loadModules($modules)
-	{
-		if(!is_array($modules))
-			throw new Exception('ModuleLoader::__construct (functions.php): Function parameter must be an array.');
-	
-		foreach($modules as $id)
-		{
-			include_once(__DIR__ . "/{$moduleId}/main.php");
-			
-			$rc = new ReflectionClass($id);
-			if(
-		}
-		
-				$rc = new ReflectionClass($className);
-			if($rc->implementsInterface('IController')) 
-			{
-				$formattedMethod = str_replace(array('_', '-'), '', $method);
-				if($rc->hasMethod($formattedMethod)) 
-				{
-					$controllerObj	= $rc->newinstance();
-					$methodObj		= $rc->getMethod($formattedMethod);
-					
-					$methodObj->invokeArgs($controllerObj, $arguments);
-	
-		foreach($moduleIds as $id)
-			$this->loadModule($id);
-	}
-	*/
 };
